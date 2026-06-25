@@ -3,51 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>G7 Technology | Consultoria em Qualidade de Software</title>
+  <title>G7 Technology LTDA | Qualidade de Software</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 24px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #020617;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      max-width: 1100px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #ffffff;
+      max-width: 850px;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+      max-width: 750px;
+      color: #cbd5e1;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 24px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 14px;
+      border: 1px solid #334155;
+    }
+
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 10px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 8px; }
+      .hero h1 { font-size: 34px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>G7 Technology</h1>
-  <h2>Consultoria em Qualidade de Software</h2>
+  <header>
+    <div class="logo">G7 Technology LTDA</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-  <p>
-    Ajudamos empresas a melhorar a qualidade dos seus sistemas por meio de
-    testes de software, automação, testes de API, testes web, mobile e estratégia de QA.
-  </p>
+  <main>
+    <section class="hero">
+      <h1>Consultoria em Qualidade de Software para empresas que precisam entregar com segurança.</h1>
+      <p>
+        A G7 Technology apoia empresas na melhoria da qualidade de sistemas por meio de testes,
+        automação, testes de API, testes web, mobile e estratégia de QA.
+      </p>
+      <a class="button" href="#contato">Solicitar consultoria</a>
+    </section>
 
-  <h2>Sobre</h2>
-  <p>
-    A G7 Technology atua com foco em Qualidade de Software, apoiando empresas
-    na identificação de riscos, melhoria de processos, redução de falhas e aumento
-    da confiabilidade das entregas digitais.
-  </p>
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Testes de Software</h3>
+          <p>Testes funcionais, exploratórios, regressão, integração, aceite e validação de regras de negócio.</p>
+        </div>
 
-  <h2>Serviços</h2>
-  <ul>
-    <li>Testes funcionais e exploratórios</li>
-    <li>Testes de regressão</li>
-    <li>Automação de testes com Cypress, Playwright e JavaScript</li>
-    <li>Testes de API</li>
-    <li>Testes web e mobile</li>
-    <li>Gestão de defeitos e estratégia de qualidade</li>
-    <li>Consultoria para implantação ou melhoria da área de QA</li>
-  </ul>
+        <div class="card">
+          <h3>Automação de Testes</h3>
+          <p>Automação com Cypress, Playwright e JavaScript para reduzir retrabalho e acelerar validações.</p>
+        </div>
 
-  <h2>Experiência</h2>
-  <p>
-    Experiência em projetos corporativos envolvendo sistemas ERP, telecom,
-    saúde, mobile, web e transformação digital, com atuação em cenários críticos
-    de negócio, migração de sistemas e melhoria contínua da qualidade.
-  </p>
+        <div class="card">
+          <h3>Testes de API</h3>
+          <p>Validação de integrações, contratos, respostas, cenários negativos e comportamento entre sistemas.</p>
+        </div>
 
-  <h2>Tecnologias</h2>
-  <p>
-    Cypress · Playwright · JavaScript · API Testing · Jira · Azure DevOps · SQL ·
-    TestLink · Git · Scrum · Kanban
-  </p>
+        <div class="card">
+          <h3>Estratégia de QA</h3>
+          <p>Implantação e melhoria de processos de qualidade, gestão de defeitos, métricas e indicadores.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Contato</h2>
-  <p>
-    Entre em contato para conversar sobre como melhorar a qualidade do seu produto.
-  </p>
+    <section id="experiencia">
+      <h2>Experiência</h2>
+      <p>
+        Mais de 10 anos de atuação em Qualidade de Software, com experiência em sistemas ERP,
+        telecom, saúde, mobile, web e transformação digital. Participação em projetos críticos
+        de migração de sistemas, automação de testes, liderança de equipes QA e melhoria contínua.
+      </p>
+    </section>
+
+    <section id="tecnologias">
+      <h2>Tecnologias e práticas</h2>
+      <span class="tag">Cypress</span>
+      <span class="tag">Playwright</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">API Testing</span>
+      <span class="tag">Jira</span>
+      <span class="tag">Azure DevOps</span>
+      <span class="tag">SQL</span>
+      <span class="tag">TestLink</span>
+      <span class="tag">Scrum</span>
+      <span class="tag">Kanban</span>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>
+        Entre em contato para conversar sobre como reduzir falhas, melhorar processos
+        e aumentar a confiabilidade das entregas do seu produto.
+      </p>
+      <a class="button" href="mailto:contato@g7technology.com.br">Enviar e-mail</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 G7 Technology LTDA. Consultoria em Qualidade de Software.</p>
+  </footer>
 </body>
 </html>
