@@ -8,36 +8,6 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .contact-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 700px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  background: #1e293b;
-  color: #e5e7eb;
-  font-size: 15px;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #94a3b8;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #38bdf8;
-}
-
     body {
       font-family: Arial, sans-serif;
       background: #0f172a;
@@ -88,7 +58,7 @@
     }
 
     .hero h1 {
-      font-size: 62px;
+      font-size: 48px;
       color: #ffffff;
       max-width: 900px;
       line-height: 1.15;
@@ -137,7 +107,7 @@
   border-radius: 16px;
   border: 1px solid #334155;
   transition: all 0.3s ease;
-  min-height: 220px;
+  min-height: 160px;
 }
 
     .card:hover {
@@ -212,6 +182,51 @@
   outline: none;
   border-color: #38bdf8;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #38bdf8;
+  color: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 24px rgba(56,189,248,0.35);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 36px rgba(56,189,248,0.55);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
     
     @media (max-width: 700px) {
       header { flex-direction: column; gap: 12px; }
@@ -259,12 +274,14 @@
   </div>
 
   <div class="card">
-    <h3>QA Manager</h3>
-    <p>Gestão de qualidade e indicadores.</p>
-  </div>
-  </section>
+  <h3>QA Manager</h3>
+  <p>Gestão de qualidade e indicadores.</p>
+</div>
 
-    <section id="resultados">
+</div>
+</section>
+
+<section id="resultados">
     <h2>Resultados que entregamos</h2>
 
     <div class="cards">
@@ -298,8 +315,6 @@
         </div>
 
     </div>
-</section>
-</div>
     </section>
     
 <section id="sobre">
@@ -519,5 +534,47 @@
     © 2026 G7 Technology LTDA. Todos os direitos reservados.
   </p>
 </footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/351920823445"
+   target="_blank"
+   aria-label="Falar no WhatsApp">
+  ☎
+</a>
+<script>
+  const revealElements = document.querySelectorAll('section, .card, .tag, footer');
+
+  revealElements.forEach((element) => {
+    element.classList.add('reveal');
+  });
+
+  const revealOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealOnScroll.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  revealElements.forEach((element) => {
+    revealOnScroll.observe(element);
+  });
+
+  const contactForm = document.querySelector('.contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+      const button = contactForm.querySelector('button');
+
+      if (button) {
+        button.textContent = 'Enviando mensagem...';
+        button.disabled = true;
+      }
+    });
+  }
+</script>
 </body>
 </html>
