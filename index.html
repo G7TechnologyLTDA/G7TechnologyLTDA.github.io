@@ -227,6 +227,304 @@ html {
   opacity: 0.7;
   cursor: not-allowed;
 }
+
+/* HOME V2 - Estilo corporativo dark */
+
+.site-header {
+  width: 100%;
+  padding: 24px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  color: #38bdf8;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #38bdf8;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.lang-button,
+.search-toggle {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.language-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 38px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  min-width: 160px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.language-menu.open {
+  display: block;
+}
+
+.language-menu button {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-menu button:hover {
+  background: #1e293b;
+}
+
+.contact-button {
+  background: #0284c7;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-2px);
+}
+
+.search-bar {
+  display: none;
+  position: sticky;
+  top: 82px;
+  z-index: 999;
+  background: #020617;
+  padding: 18px 7%;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+  gap: 12px;
+}
+
+.search-bar.open {
+  display: flex;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.search-bar button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hero::before {
+  display: none;
+}
+
+.hero-home {
+  min-height: calc(100vh - 86px);
+  max-width: none;
+  margin: 0;
+  padding: 130px 7%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(2, 6, 23, 0.98) 0%, rgba(15, 23, 42, 0.92) 45%, rgba(15, 23, 42, 0.60) 100%),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center right;
+}
+
+.hero-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 50%, rgba(56,189,248,0.18), transparent 32%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.hero-label {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #38bdf8;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-home h1 {
+  font-size: clamp(42px, 5.5vw, 82px);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #ffffff;
+  max-width: 760px;
+}
+
+.hero-home > p,
+.hero-content p {
+  margin-top: 28px;
+  font-size: clamp(18px, 1.8vw, 24px);
+  color: #e2e8f0;
+  max-width: 780px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.hero-button {
+  display: inline-block;
+  background: #facc15;
+  color: #020617;
+  padding: 16px 34px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.35);
+}
+
+.hero-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid #38bdf8;
+  padding-bottom: 4px;
+}
+
+.hero-code {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.72);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.code-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.code-header span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #38bdf8;
+  opacity: 0.8;
+}
+
+.hero-code pre {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero-home {
+    padding: 90px 7%;
+  }
+
+  .hero-code {
+    display: none;
+  }
+}
     
     @media (max-width: 700px) {
       header { flex-direction: column; gap: 12px; }
@@ -236,49 +534,94 @@ html {
   </style>
 </head>
 
-<body>
-  <header>
-    <div class="logo">G7 Technology LTDA</div>
-    <nav>
-  <a href="#sobre">Quem Somos</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#diferenciais">Diferenciais</a>
-  <a href="#clientes">Projetos</a>
-  <a href="#contato">Contato</a>
-</nav>
-  </header>
+<body id="top">
+ <header class="site-header">
+  <a href="#top" class="brand" aria-label="Voltar ao topo">
+    G7 Technology
+  </a>
+
+  <nav class="main-nav">
+    <a href="#sobre" data-i18n="navAbout">Quem Somos</a>
+    <a href="#servicos" data-i18n="navServices">Serviços</a>
+    <a href="#diferenciais" data-i18n="navDifferentials">Diferenciais</a>
+    <a href="#clientes" data-i18n="navProjects">Projetos</a>
+  </nav>
+
+  <div class="header-actions">
+    <div class="language-selector">
+      <button type="button" id="langButton" class="lang-button">
+        <span id="currentFlag">🇧🇷</span>
+        <span id="currentLang">PT</span>
+        <span>⌄</span>
+      </button>
+
+      <div class="language-menu" id="languageMenu">
+        <button type="button" data-lang="pt">🇧🇷 Português</button>
+        <button type="button" data-lang="en">🇺🇸 English</button>
+        <button type="button" data-lang="es">🇪🇸 Español</button>
+      </div>
+    </div>
+
+    <button type="button" class="search-toggle" id="searchToggle" aria-label="Pesquisar">
+      🔍
+    </button>
+
+    <a href="#contato" class="contact-button" data-i18n="navContact">
+      Contato
+    </a>
+  </div>
+</header>
+
+<div class="search-bar" id="searchBar">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Digite o que você procura..."
+  />
+  <button type="button" id="searchButton">Buscar</button>
+</div>
 
   <main>
-    <section class="hero">
-      <h1>Reduza falhas críticas, acelere entregas e aumente a confiabilidade dos seus sistemas.</h1>
-      <p>
-        A G7 Technology ajuda empresas a elevar a qualidade de software através de testes,
-        automação, estratégia de QA e melhoria contínua de processos. Mais de 10 anos de experiência
-        em projetos de Telecom, ERP, Saúde, Mobile, Web e Transformação Digital.
-      </p>
-      <div class="cards" style="margin-top:60px;">
+   <section class="hero hero-home">
+  <div class="hero-content">
+    <span class="hero-label" data-i18n="heroLabel">G7 Technology LTDA</span>
 
-  <div class="card">
-    <h3>10+ Anos</h3>
-    <p>Experiência em Qualidade de Software.</p>
+    <h1 data-i18n="heroTitle">
+      Qualidade de software para entregas mais seguras.
+    </h1>
+
+    <p data-i18n="heroText">
+      Reduza falhas críticas, retrabalho e riscos em produção com uma estratégia
+      de QA orientada a processos, automação e confiabilidade.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contato" class="hero-button" data-i18n="heroButton">
+        Solicitar diagnóstico
+      </a>
+
+      <a href="#servicos" class="hero-link" data-i18n="heroSecondary">
+        Conhecer serviços
+      </a>
+    </div>
   </div>
 
-  <div class="card">
-    <h3>QA Engineer</h3>
-    <p>Atuação técnica em projetos críticos.</p>
+  <div class="hero-code" aria-hidden="true">
+    <div class="code-header">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <pre>
+quality.check({
+  risk: "critical flows",
+  automation: "regression",
+  api: "validated",
+  status: "approved"
+});
+    </pre>
   </div>
-
-  <div class="card">
-    <h3>QA Lead</h3>
-    <p>Liderança e estratégia de testes.</p>
-  </div>
-
-  <div class="card">
-  <h3>QA Manager</h3>
-  <p>Gestão de qualidade e indicadores.</p>
-</div>
-
-</div>
 </section>
 
 <section id="resultados">
@@ -576,5 +919,124 @@ html {
     });
   }
 </script>
+
+  <script>
+  const translations = {
+    pt: {
+      flag: "🇧🇷",
+      lang: "PT",
+      searchPlaceholder: "Digite o que você procura...",
+      navAbout: "Quem Somos",
+      navServices: "Serviços",
+      navDifferentials: "Diferenciais",
+      navProjects: "Projetos",
+      navContact: "Contato",
+      heroLabel: "G7 Technology LTDA",
+      heroTitle: "Qualidade de software para entregas mais seguras.",
+      heroText: "Reduza falhas críticas, retrabalho e riscos em produção com uma estratégia de QA orientada a processos, automação e confiabilidade.",
+      heroButton: "Solicitar diagnóstico",
+      heroSecondary: "Conhecer serviços"
+    },
+    en: {
+      flag: "🇺🇸",
+      lang: "EN",
+      searchPlaceholder: "Type what you are looking for...",
+      navAbout: "About us",
+      navServices: "Services",
+      navDifferentials: "Differentials",
+      navProjects: "Projects",
+      navContact: "Contact",
+      heroLabel: "G7 Technology LTD",
+      heroTitle: "Software quality for safer deliveries.",
+      heroText: "Reduce critical failures, rework and production risks with a QA strategy focused on processes, automation and reliability.",
+      heroButton: "Request assessment",
+      heroSecondary: "Explore services"
+    },
+    es: {
+      flag: "🇪🇸",
+      lang: "ES",
+      searchPlaceholder: "Escribe lo que buscas...",
+      navAbout: "Quiénes somos",
+      navServices: "Servicios",
+      navDifferentials: "Diferenciales",
+      navProjects: "Proyectos",
+      navContact: "Contacto",
+      heroLabel: "G7 Technology LTDA",
+      heroTitle: "Calidad de software para entregas más seguras.",
+      heroText: "Reduzca fallas críticas, retrabajo y riesgos en producción con una estrategia de QA orientada a procesos, automatización y confiabilidad.",
+      heroButton: "Solicitar diagnóstico",
+      heroSecondary: "Conocer servicios"
+    }
+  };
+
+  const langButton = document.getElementById("langButton");
+  const languageMenu = document.getElementById("languageMenu");
+  const currentFlag = document.getElementById("currentFlag");
+  const currentLang = document.getElementById("currentLang");
+  const searchInput = document.getElementById("searchInput");
+
+  langButton.addEventListener("click", () => {
+    languageMenu.classList.toggle("open");
+  });
+
+  document.querySelectorAll("[data-lang]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedLang = button.getAttribute("data-lang");
+      const dictionary = translations[selectedLang];
+
+      currentFlag.textContent = dictionary.flag;
+      currentLang.textContent = dictionary.lang;
+      searchInput.placeholder = dictionary.searchPlaceholder;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        element.textContent = dictionary[key];
+      });
+
+      languageMenu.classList.remove("open");
+    });
+  });
+
+  const searchToggle = document.getElementById("searchToggle");
+  const searchBar = document.getElementById("searchBar");
+  const searchButton = document.getElementById("searchButton");
+
+  searchToggle.addEventListener("click", () => {
+    searchBar.classList.toggle("open");
+    searchInput.focus();
+  });
+
+  function runSearch() {
+    const term = searchInput.value.toLowerCase().trim();
+
+    const searchMap = [
+      { words: ["serviço", "servico", "services", "servicios", "teste", "qa", "api", "automação", "automacao", "automation"], target: "#servicos" },
+      { words: ["diferencial", "diferenciais", "benefício", "beneficio", "benefits", "valor", "qualidade"], target: "#diferenciais" },
+      { words: ["projeto", "projetos", "projects", "claro", "vivo", "amil", "karsten", "philips", "banco"], target: "#clientes" },
+      { words: ["contato", "contact", "contacto", "whatsapp", "email", "e-mail"], target: "#contato" },
+      { words: ["quem somos", "about", "empresa", "company"], target: "#sobre" }
+    ];
+
+    const result = searchMap.find((item) =>
+      item.words.some((word) => term.includes(word))
+    );
+
+    if (result) {
+      document.querySelector(result.target).scrollIntoView({ behavior: "smooth" });
+      searchBar.classList.remove("open");
+    } else {
+      alert("Não encontrei essa informação. Tente buscar por serviços, projetos, contato ou QA.");
+    }
+  }
+
+  searchButton.addEventListener("click", runSearch);
+
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      runSearch();
+    }
+  });
+</script>
+  
 </body>
 </html>
