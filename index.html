@@ -15,6 +15,18 @@
       line-height: 1.6;
     }
 
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(56, 189, 248, 0.08);
+      filter: blur(120px);
+      border-radius: 50%;
+      top: -100px;
+      right: 0;
+    }
+
     header {
       padding: 24px 8%;
       display: flex;
@@ -40,20 +52,23 @@
     }
 
     .hero {
-      padding: 90px 8%;
-      max-width: 1100px;
+      padding: 120px 8%;
+      max-width: 1300px;
+      position: relative;
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 62px;
       color: #ffffff;
-      max-width: 850px;
+      max-width: 900px;
+      line-height: 1.15;
+      font-weight: 800;
     }
 
     .hero p {
-      margin-top: 20px;
-      font-size: 20px;
-      max-width: 750px;
+      margin-top: 24px;
+      font-size: 22px;
+      max-width: 800px;
       color: #cbd5e1;
     }
 
@@ -122,6 +137,22 @@
       color: #94a3b8;
     }
 
+.hero,
+#resultados,
+#sobre,
+#servicos,
+#experiencia,
+#diferenciais,
+#tecnologias,
+#clientes,
+#contato {
+  width: 100%;
+}
+
+#resultados .cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+    
     @media (max-width: 700px) {
       header { flex-direction: column; gap: 12px; }
       nav a { margin: 0 8px; }
@@ -171,6 +202,7 @@
     <h3>QA Manager</h3>
     <p>Gestão de qualidade e indicadores.</p>
   </div>
+        
 <section id="resultados">
     <h2>Resultados que entregamos</h2>
 
@@ -231,6 +263,7 @@
         resultados, eficiência e melhoria contínua.
     </p>
 </section>
+    
     <section id="servicos">
       <h2>Serviços</h2>
       <div class="cards">
@@ -370,30 +403,66 @@
 
     </div>
 </section>
+    
    <section id="contato">
   <h2>Entre em Contato</h2>
 
   <p>
-    Precisa melhorar a qualidade do seu software,
-    reduzir falhas em produção ou implantar automação de testes?
+    Preencha o formulário abaixo para conversar sobre qualidade de software,
+    automação de testes ou estratégia de QA.
   </p>
 
-  <br>
+  <form action="https://formsubmit.co/g7technology@outlook.com.br" method="POST" class="contact-form">
+    <input type="hidden" name="_subject" value="Novo contato pelo site G7 Technology LTDA">
+    <input type="hidden" name="_captcha" value="false">
 
-  <p>
-    📱 WhatsApp: +351 920 823 445
-  </p>
+    <input type="text" name="nome" placeholder="Seu nome" required>
 
-  <br>
+    <input type="text" name="empresa" placeholder="Nome da empresa">
 
-  <a class="button"
-     href="https://wa.me/351920823445"
-     target="_blank">
-      Solicitar Atendimento Gratuito
+    <input type="text" name="contato" placeholder="E-mail ou WhatsApp para retorno" required>
+
+    <textarea name="mensagem" rows="6" placeholder="Escreva sua mensagem" required></textarea>
+
+    <button type="submit" class="button">Enviar mensagem</button>
+  </form>
+
+  <a class="button" href="https://wa.me/351920823445" target="_blank">
+    Falar no WhatsApp
   </a>
 </section>
   </main>
 
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e5e7eb;
+  font-size: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+  
   <footer>
   <h3>G7 Technology LTDA</h3>
 
